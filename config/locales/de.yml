@@ -1,0 +1,65 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+  activerecord:
+    models:
+      spree/blog_entry:
+        one: Blog Eintrag
+        other: Blog Einträge
+    attributes:
+      spree/blog_entry:
+        title: Titel
+        body: Inhalt
+        summary: Zusammenfassung
+        permalink: Permalink
+        published_at: Veröffentlicht am
+        visible: Sichtbar
+        author_id: Author
+        tag_list: Schlagwörter
+        category_list: Kategorien
+      spree/user:
+        nickname: Nickname
+        website_url: Website URL
+        google_plus_url: Google Plus URL
+        bio_info: Biographical info
+  spree:
+    title: Titel
+    body: Inhalt
+    summary: Zusammenfassung
+    permalink: Permalink
+    published_at: Veröffentlicht am
+    visible: Sichtbar
+    author_id: Author
+    tag_list: Schlagwörter
+    category_list: Kategorien
+    nickname: Nickname
+    website_url: Website URL
+    google_plus_url: Google Plus URL
+    bio_info: Biographical info
+    blog: "Blog"
+    blog_entries: "Blog Einträge"
+    new_blog_entry: "Neuer Blog Eintrag"
+    no_blog_entries: "Keine Einträge gefunden."
+    blog_entry_featured_image: Titelbild
+    posted_on: Geschrieben am
+    posted_in: in
+    tagged: Tagged
+    by: von
+    blog_read_more: Weiter lesen
+    blog_archive: Archiv
+    blog_tag: Schlagwort
+    blog_category: Kategorie
+    blog_author: Author
+    admin:
+      tab:
+        blog_entries: Blog Einträge
+    blog:
+      ago: vor
+      categories: Kategorien
+      tags: Schlagwörter
+      recent_entries: Neu
+      archive: Archiv
+  time:
+    formats:
+      blog_date: "%e %b %Y"
