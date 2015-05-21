@@ -1,6 +1,15 @@
 class Spree::Admin::BlogEntriesController < Spree::Admin::ResourceController
   helper 'spree/blog_entries'
+  create.after :create_images
+  update.after :create_images
 
+  def create_images
+    if params[:attachments_array]
+      params[:attachments_array].each { |image|
+        @object.blog_entry_images.create(attachment: image)
+      }
+    end
+  end
 
   private
 
