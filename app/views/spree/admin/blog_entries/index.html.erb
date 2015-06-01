@@ -25,7 +25,7 @@
           <td><%= blog_entry.title %></td>
           <td><%= link_to blog_entry_permalink(blog_entry), blog_entry_permalink(blog_entry) %></td>
           <td class="align-center">
-            <%= content_tag(:i, '', :class => 'icon-ok green') if blog_entry.visible %>
+            <%= content_tag(:i, '', :class => 'fa fa-ok green') if blog_entry.visible? %>
           </td> 
           <td class="actions">
             <%= link_to_edit blog_entry, :no_text => true %>
