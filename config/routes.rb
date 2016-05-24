@@ -1,8 +1,13 @@
 Spree::Core::Engine.routes.draw do
   namespace :admin do
-    resources :blog_entries
+    resources :blog_entries do
+      resources :blog_entry_images do
+        collection do
+          post :update_positions
+        end
+      end
+    end
   end
-
   scope Spree::Config['blog_alias'], as: 'blog' do
     get '/tag/:tag' => 'blog_entries#tag', :as => :tag
     get '/category/:category' => 'blog_entries#category', :as => :category
