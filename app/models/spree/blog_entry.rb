@@ -16,8 +16,7 @@ class Spree::BlogEntry < ActiveRecord::Base
   else
     belongs_to :author
   end
-
-  has_many :blog_entry_images, :as => :viewable, :dependent => :destroy, :class_name => 'Spree::BlogEntryImage'
+  has_many :blog_entry_images, -> { order(:position) }, as: :viewable, dependent: :destroy, class_name: 'Spree::BlogEntryImage'
   accepts_nested_attributes_for :blog_entry_images, reject_if: :all_blank, allow_destroy: true
 
   def entry_summary(chars=200)
